@@ -2,13 +2,9 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Exercice n°2</title>
+	<title>Exercice n°3</title>
 </head>
 <body>
-	<a href="?message=Rouge&size=15&couleur=red">Rouge en 15</a><br>
-	<a href="?message=Vert&size=30&couleur=green">Vert en 30</a><br>
-	<a href="?message=Bleu&size=50&couleur=blue">Bleu en 50</a><br>
-	<hr>
 	<?php
 	$size = $_POST['size'] ?? 10;
 	$color = $_POST['couleur'] ?? 'black';
