@@ -1,6 +1,5 @@
-<a href="?message=Premier lien">1<a>
-<a href="?message=2ème lien">2<a>
-<a href="?message=3ème lien">3<a>
-<h1>
-    <?=$_GET['message']??'pas de message' ?>
-</h1>
+<a href="?message=Hello">Afficher Hello</a><br>
+<a href="?message=Message">Afficher Hello</a><br>
+<a href="?message=Hello">Afficher Hello</a>
+<?php
+echo "<h1>" . $_GET["message"]??"" . "</h1>";
