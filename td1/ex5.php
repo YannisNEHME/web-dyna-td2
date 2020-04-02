@@ -33,4 +33,3 @@ createHtmlTable($nbLignes,$nbColonnes);
 
 include "include/footer.php";
  ?>
-
