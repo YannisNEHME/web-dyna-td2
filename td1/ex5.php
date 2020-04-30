@@ -20,12 +20,11 @@ include "include/function.php";
 
 <?php
 //Récupère les paramètres l et c passés dans l'url
-$nbLignes=$_GET["l"]??10;
-$nbColonnes=$_GET["c"]??10;
+$nblignes=$_GET["l"]??10;
+$nbcolonnes=$_GET["c"]??10;
 
-echo "<h2>Tableau de $nbLignes par $nbColonnes</h2>";
-createHtmlTable($nbLignes,$nbColonnes);
-
+echo "<h2>Tableau de $nblignes par $nbcolonnes</h2>";
+createHtmlTable($nblignes,$nbcolonnes);
 
 
 

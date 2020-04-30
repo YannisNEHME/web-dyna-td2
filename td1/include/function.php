@@ -23,20 +23,18 @@ function createHtmlTable($nblignes,$nbcolonnes){
 }
 
 function element($titre, $contenu, $niveau=1){
-    $html = "<h" . $niveau . ">" . $titre . "</h" . $niveau . "> <div>" . $contenu . "</div>";
-    return $html;
+  return "<h$niveau>$titre</h$niveau>
+          <div>$contenu</div>";
 }
 
 
-function parseElement($elements){
-    $code = '';
-    for($a=0; $a<count($elements); $a++){
-        $niveau = $elements[$a]['niveau'] ?? "1";
-        $code .= element($elements[$a]["titre"], $elements[$a]["contenu"], $niveau);
-    }
-    return $code;
+function parseElements($elements){
+  $resp='';
+  foreach ($elements as $elm) {
+    $resp.=element($elm['titre'],$elm['contenu'],$elm['niveau']??1);
+  }
+  return $resp;
 }
-
 
 
 
