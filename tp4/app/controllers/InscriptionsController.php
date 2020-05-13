@@ -29,15 +29,14 @@ public function do(){
     $variable = new Inscription();
         $variable->setNom($_POST["pseudo"]);
         $variable->setEmail($_POST["email"]);
-        DAO::insert($variable);
     
-    if(DAO::insert($var)){
-            echo "Confirmé, redirection...";
-            UResponse::header("location" ,"/inscriptionsController"); 
-        }
-        else{
-            echo "<div class='ui red message'><p>Votre adresse Mail " . $_POST["email"] . " n'a pas fonctionnée pour votre inscription</p><a href='/inscriptionsController'>Retour à la page d'accueil</a></div>";
-        }
+        if(DAO::insert($variable)){
+                echo "Correct, Incorrect";
+                UResponse::header("location" ,"/InscriptionsController"); 
+            }
+            else{
+                echo "<div class='ui blue message'><p>Votre adresse Mail " . $_POST["email"] . " n'a pas fonctionnée pour votre inscription</p><a href='/inscriptionsController'>Vous aller retourner à la page d'accueil</a></div>";
+            }
     
     }
 }
